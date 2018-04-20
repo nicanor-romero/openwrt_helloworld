@@ -26,6 +26,7 @@ PKG_SOURCE_URL:=https://github.com/nicanor-romero/openwrt_helloworld.git
 PKG_SOURCE_BRANCH:=github/master
 PKG_SOURCE_PROTO:=git
 
+
 # This specifies the directory where we're going to build the program.  
 # The root build directory, $(BUILD_DIR), is by default the build_mipsel 
 # directory in your OpenWrt SDK directory
@@ -80,4 +81,4 @@ endef
 # The above define directives specify all the information needed, but this
 # line calls BuildPackage which in turn actually uses this information to
 # build a package.
-$(eval $(call BuildPackage,helloworld))
+$(eval $(call BuildPackage,$(PKG_NAME)))
