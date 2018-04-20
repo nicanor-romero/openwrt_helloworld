@@ -25,12 +25,9 @@ PKG_RELEASE:=1
 PKG_SOURCE_URL:=https://github.com/nicanor-romero/openwrt_helloworld.git
 PKG_SOURCE_BRANCH:=github/master
 PKG_SOURCE_PROTO:=git
-
-
-# This specifies the directory where we're going to build the program.  
-# The root build directory, $(BUILD_DIR), is by default the build_mipsel 
-# directory in your OpenWrt SDK directory
-PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
+PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION).$(PKG_RELEASE)
+PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_SOURCE_SUBDIR)
 
 include $(INCLUDE_DIR)/uclibc++.mk
 include $(INCLUDE_DIR)/package.mk
