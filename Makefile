@@ -20,8 +20,11 @@ include $(TOPDIR)/rules.mk
 
 # Name and release number of this package
 PKG_NAME:=helloworld
+PKG_VERSION:=1.0
 PKG_RELEASE:=1
-
+PKG_SOURCE_URL:=https://github.com/nicanor-romero/openwrt_helloworld.git
+PKG_SOURCE_BRANCH:=github/master
+PKG_SOURCE_PROTO:=git
 
 # This specifies the directory where we're going to build the program.  
 # The root build directory, $(BUILD_DIR), is by default the build_mipsel 
