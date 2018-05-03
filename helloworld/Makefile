@@ -30,10 +30,8 @@ PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION).$(PKG_RELEASE)
 PKG_SOURCE_VERSION:=6af999d4248592b7d73c1acecbe687baf2bd0990
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_SOURCE_SUBDIR)
 
-include $(INCLUDE_DIR)/uclibc++.mk
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
-
 
 # Specify package information for this program. 
 # The variables defined here should be self explanatory.
@@ -41,7 +39,7 @@ define Package/helloworld
   SECTION:=utils
   CATEGORY:=Utilities
   TITLE:=Helloworld -- prints a snarky message
-  DEPENDS:=+uclibcxx
+  DEPENDS:=+libstdcpp
 endef
 
 define Package/helloworld/description

@@ -1,5 +1,7 @@
 Makefile
 src/CMakeLists.txt
 src/Makefile
+src/MyClass.cpp
+src/MyClass.h
 src/helloworld.cpp
 toolchain-arm_cortex-a7.cmake
